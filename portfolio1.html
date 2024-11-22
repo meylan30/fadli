@@ -1,0 +1,409 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   My Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   .hover-card {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .hover-card:hover {
+            background-color: #2d3748;
+            transform: scale(1.05);
+        }
+        .hover\:scale-105 {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+        .active {
+            color: #48bb78; /* Tailwind's green-500 */
+        }
+        .hidden {
+            display: none;
+        }
+        .rotate-in-right {
+            animation: rotateInRight 0.5s forwards;
+        }
+        @keyframes rotateInRight {
+            0% {
+                transform: rotateY(-90deg);
+                opacity: 0;
+            }
+            100% {
+                transform: rotateY(0);
+                opacity: 1;
+            }
+        }
+  </style>
+ </head>
+ <body class="bg-gray-800 text-white font-sans">
+  <div class="flex">
+   <!-- Sidebar -->
+   <div class="w-1/4 bg-gray-900 h-screen p-5">
+    <ul class="space-y-4">
+     <li class="flex items-center space-x-2">
+      <i class="fas fa-home">
+      </i>
+      <a class="text-white hover:text-green-500" href="#home" onclick="showSlide('home')">
+       Home
+      </a>
+     </li>
+     <li class="flex items-center space-x-2">
+      <i class="fas fa-user">
+      </i>
+      <a class="text-white hover:text-green-500" href="#about" onclick="showSlide('about')">
+       About Me
+      </a>
+     </li>
+     <li class="flex items-center space-x-2">
+      <i class="fas fa-briefcase">
+      </i>
+      <a class="text-white hover:text-green-500" href="#services" onclick="showSlide('services')">
+       Services
+      </a>
+     </li>
+     <li class="flex items-center space-x-2">
+      <i class="fas fa-images">
+      </i>
+      <a class="text-white hover:text-green-500" href="#gallery" onclick="showSlide('gallery')">
+       Gallery
+      </a>
+     </li>
+     <li class="flex items-center space-x-2">
+      <i class="fas fa-envelope">
+      </i>
+      <a class="text-white hover:text-green-500" href="#contact" onclick="showSlide('contact')">
+       Contact Me
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!-- Main Content -->
+   <div class="w-3/4 p-10">
+    <!-- Home Section -->
+    <section class="slide" id="home">
+     <h1 class="text-4xl font-bold">
+      Hi! I'm
+      <span class="text-green-500">
+       Fadli
+      </span>
+      ,
+     </h1>
+     <h2 class="text-2xl text-green-500">
+      A Web Developer
+     </h2>
+     <div class="mt-5 space-x-4">
+      <button class="bg-green-500 text-white px-4 py-2 rounded">
+       Hire Me
+      </button>
+      <button class="bg-green-500 text-white px-4 py-2 rounded">
+       Contact Me
+      </button>
+     </div>
+     <div class="mt-10 relative">
+      <div class="relative w-56 h-56 mx-auto">
+       <img alt="A person wearing a red shirt and a black cap" class="rounded-full border-4 border-green-500 shadow-lg" height="224" src="WhatsApp Image 2024-11-22 at 14.29.54_8db3f662.jpg" width="224"/>
+       <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-48 h-48 bg-green-500 rounded-full opacity-50 animate-ping">
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- About Me Section -->
+    <section class="slide hidden" id="about">
+     <h1 class="text-4xl text-green-500 mb-5">
+      About Me
+     </h1>
+     <p class="mb-5">
+        Saya seorang pengembang web yang bersemangat dengan pengalaman dalam membuat situs web yang dinamis dan responsif menggunakan teknologi web modern.     </p>
+     <div class="grid grid-cols-2 gap-4 mb-5">
+      <div>
+       <p>
+        <span class="text-green-500">
+         Experience:
+        </span>
+        2+ years
+       </p>
+       <p>
+        <span class="text-green-500">
+         Availability:
+        </span>
+        24/7
+       </p>
+       <p>
+        <span class="text-green-500">
+         Age:
+        </span>
+        21
+       </p>
+       <p>
+        <span class="text-green-500">
+         Degree:
+        </span>
+        CS
+       </p>
+      </div>
+      <div>
+       <p>
+        <span class="text-green-500">
+         Country:
+        </span>
+        Philippines
+       </p>
+       <p>
+        <span class="text-green-500">
+         Hobby:
+        </span>
+        Tiktoker, Programmer
+       </p>
+       <p>
+        <span class="text-green-500">
+         Phone:
+        </span>
+        123-456-7890
+       </p>
+      </div>
+     </div>
+     <div class="space-y-4">
+      <div>
+       <p class="text-green-500">
+        HTML
+       </p>
+       <div class="w-full bg-gray-700 rounded-full h-2.5">
+        <div class="bg-green-500 h-2.5 rounded-full" style="width: 90%">
+        </div>
+       </div>
+      </div>
+      <div>
+       <p class="text-green-500">
+        CSS
+       </p>
+       <div class="w-full bg-gray-700 rounded-full h-2.5">
+        <div class="bg-green-500 h-2.5 rounded-full" style="width: 70%">
+        </div>
+       </div>
+      </div>
+      <div>
+       <p class="text-green-500">
+        JavaScript
+       </p>
+       <div class="w-full bg-gray-700 rounded-full h-2.5">
+        <div class="bg-green-500 h-2.5 rounded-full" style="width: 80%">
+        </div>
+       </div>
+      </div>
+      <div>
+       <p class="text-green-500">
+        Python
+       </p>
+       <div class="w-full bg-gray-700 rounded-full h-2.5">
+        <div class="bg-green-500 h-2.5 rounded-full" style="width: 60%">
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="mt-5 space-x-4">
+      <button class="bg-green-500 text-white px-4 py-2 rounded">
+       Hire Me
+      </button>
+      <button class="bg-green-500 text-white px-4 py-2 rounded">
+       Contact Me
+      </button>
+     </div>
+    </section>
+    <!-- Services Section -->
+    <section class="slide hidden" id="services">
+     <h1 class="text-4xl text-green-500 mb-10">
+      Services
+     </h1>
+     <div class="grid grid-cols-3 gap-10">
+      <!-- Service 1 -->
+      <div class="bg-gray-700 p-5 rounded-lg text-center hover-card">
+       <i class="fas fa-paint-brush text-4xl text-green-500 mb-4">
+       </i>
+       <h2 class="text-2xl text-green-500 mb-2">
+        Web Design
+       </h2>
+       <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod.
+       </p>
+      </div>
+      <!-- Service 2 -->
+      <div class="bg-gray-700 p-5 rounded-lg text-center hover-card">
+       <i class="fas fa-globe text-4xl text-green-500 mb-4">
+       </i>
+       <h2 class="text-2xl text-green-500 mb-2">
+        Web Development
+       </h2>
+       <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod.
+       </p>
+      </div>
+      <!-- Service 3 -->
+      <div class="bg-gray-700 p-5 rounded-lg text-center hover-card">
+       <i class="fas fa-video text-4xl text-green-500 mb-4">
+       </i>
+       <h2 class="text-2xl text-green-500 mb-2">
+        Video Edit
+       </h2>
+       <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quod.
+       </p>
+      </div>
+     </div>
+    </section>
+    <!-- Gallery Section -->
+    <section class="slide hidden" id="gallery">
+     <h1 class="text-3xl text-green-500 mb-8">
+      Gallery
+     </h1>
+     <div class="grid grid-cols-3 gap-4">
+      <div class="bg-gray-700 p-4 rounded hover:scale-105">
+       <img alt="A small black cat sitting on the floor" class="rounded" height="200" src="Profesi-Web-Developer_626-x-626-px.png" width="500"/>
+      </div>
+      <div class="bg-gray-700 p-4 rounded hover:scale-105">
+       <img alt="A white cat looking at the camera" class="rounded" height="200" src="web-depeloper.jpg" width="500"/>
+      </div>
+      <div class="bg-gray-700 p-4 rounded hover:scale-105">
+       <img alt="A cat wearing a spiky hat" class="rounded" height="200" src="web-developer-pengertian-tugas-skill-dan-contohnya-295345.png" width="500"/>
+      </div>
+      <div class="bg-gray-700 p-4 rounded hover:scale-105">
+       <img alt="Two cats cuddling together" class="rounded" height="200" src="1612913493353.png" width="500"/>
+      </div>
+      <div class="bg-gray-700 p-4 rounded hover:scale-105">
+       <img alt="A person holding a cat with a text in the background" class="rounded" height="200" src="9fbe8834c4f9b277b304a595a367513d (1).jpg" width="500"/>
+      </div>
+      <div class="bg-gray-700 p-5 rounded hover:scale-105">
+       <img alt="A tiny kitten being held by a hand" class="rounded" height="200" src="Web-Developer-skill.jpg" width="500"/>
+      </div>
+     </div>
+    </section>
+    <!-- Contact Me Section -->
+    <section class="slide hidden" id="contact">
+     <h1 class="text-3xl text-green-500 mb-8">
+      Contact Me
+     </h1>
+     <div class="flex space-x-10">
+      <!-- Contact Info -->
+      <div class="space-y-6">
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-phone-alt text-green-500">
+        </i>
+        <div>
+         <p class="text-green-500">
+          Mobile No
+         </p>
+         <p>
+          082271021732
+         </p>
+        </div>
+       </div>
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-map-marker-alt text-green-500">
+        </i>
+        <div>
+         <p class="text-green-500">
+          Location
+         </p>
+         <p>
+          Gorontalo, Molopatodu
+         </p>
+        </div>
+       </div>
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-envelope text-green-500">
+        </i>
+        <div>
+         <p class="text-green-500">
+          Email
+         </p>
+         <p>
+          fadli@gmail.com
+         </p>
+        </div>
+       </div>
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-globe text-green-500">
+        </i>
+        <div>
+         <p class="text-green-500">
+          Website
+         </p>
+         <p>
+          www.abc123.com
+         </p>
+        </div>
+       </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="flex-1">
+       <h2 class="text-xl mb-4">
+        Send Me A Message
+       </h2>
+       <form class="space-y-4">
+        <div class="flex space-x-4">
+         <input class="w-1/2 p-2 bg-gray-700 border border-gray-600 rounded" placeholder="Name" type="text"/>
+         <input class="w-1/2 p-2 bg-gray-700 border border-gray-600 rounded" placeholder="Email" type="email"/>
+        </div>
+        <textarea class="w-full p-2 bg-gray-700 border border-gray-600 rounded h-32" placeholder="Type your Message Here..."></textarea>
+        <button class="bg-green-500 text-white px-4 py-2 rounded" type="submit">
+         Send
+        </button>
+       </form>
+      </div>
+     </div>
+     <!-- Social Media Icons -->
+     <div class="flex space-x-4 mt-8">
+      <a class="text-white" href="#">
+       <i class="fab fa-codepen">
+       </i>
+      </a>
+      <a class="text-white" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a class="text-white" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="text-white" href="#">
+       <i class="fab fa-facebook">
+       </i>
+      </a>
+     </div>
+     <!-- Footer -->
+     <div class="mt-10 text-center text-gray-500">
+      Copyright © 2024 Meowish
+     </div>
+    </section>
+   </div>
+  </div>
+  <script>
+   function showSlide(slideId) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+                slide.classList.add('hidden');
+                slide.classList.remove('rotate-in-right');
+            });
+            const activeSlide = document.getElementById(slideId);
+            activeSlide.classList.remove('hidden');
+            activeSlide.classList.add('rotate-in-right');
+            
+            const links = document.querySelectorAll('a');
+            links.forEach(link => link.classList.remove('active'));
+            document.querySelector(`a[href="#${slideId}"]`).classList.add('active');
+        }
+        
+        // Show the home slide by default
+        showSlide('home');
+  </script>
+ </body>
+</html>
